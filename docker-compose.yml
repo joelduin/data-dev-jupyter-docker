@@ -7,12 +7,11 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ~/.aws:/root/.aws
-  #    - /home/tiendanube/work:/Users/guidofarre/Work/repos/jupyter-datascience-dev/notebooks
+      - ~/.aws/:/home/.aws/:ro
+      - /home/ubuntu/notebooks:/home/jovyan/work
     environment:
-      # - NB_USER=tiendanube
       - CHOWN_HOME=yes
       - GRANT_SUDO=yes
       - JUPYTER_ENABLE_LAB=yes
 
-    command: "start.sh jupyter notebook --NotebookApp.token='Nube2021'"
+    command: "start.sh jupyter notebook --NotebookApp.token='Nube2021 --NotebookApp.base_url=/home/jovyan/work'"
