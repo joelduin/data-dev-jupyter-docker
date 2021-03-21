@@ -14,4 +14,4 @@ services:
       - GRANT_SUDO=yes
       - JUPYTER_ENABLE_LAB=yes
 
-    command: "start.sh jupyter notebook --NotebookApp.token='Nube2021 --NotebookApp.base_url=/home/jovyan/work'"
+    command: "start.sh jupyter notebook --NotebookApp.token='Nube2021' --NotebookApp.base_url=/home/jovyan/work"
