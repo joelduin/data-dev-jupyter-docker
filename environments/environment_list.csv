@@ -1,0 +1,3 @@
+name, yml_path, requirements_path
+guido_env,envs/environment_guido.yml,envs/requirements_guido.txt
+uru_env,envs/environment_uru.yml,envs/requirements_uru.txt
