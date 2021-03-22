@@ -12,7 +12,7 @@ do
  
   echo ""
 
-  sh conda env create -q -f "${PWD}/${yml_path}"
+  conda env create -q -f "${PWD}/${yml_path}"
 
   
 done < <(tail -n +2 environments/environment_list.csv)

@@ -17,10 +17,11 @@ RUN aws --version
 
 # Clone repo to create env
 
-RUN git clone https://github.com/farreg/jupyter-datascience-dev.git /home/jupyter-datascience-dev/ 
+RUN git clone https://github.com/TiendaNube/data-dev-jupyter-docker.git /home/jupyter-datascience-dev/ 
 
 RUN cd /home/jupyter-datascience-dev
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_guido.yml
-RUN /test.sh
+RUN chmod -R 777 /home/jupyter-datascience-dev
+#RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_guido.yml
+#RUN ./test.sh
 #SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
 #RUN python -m ipykernel install --name guido_env --display-name "guido_env"
