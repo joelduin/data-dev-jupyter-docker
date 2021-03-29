@@ -1,4 +1,4 @@
-name: guido_env
+name: uru_env
 dependencies:
   - python=3.7
   - ipykernel
