@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=jupyter/pyspark-notebook
+ARG BASE_CONTAINER=jupyter/minimal-notebook
 FROM $BASE_CONTAINER
 
 USER root
