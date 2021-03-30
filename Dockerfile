@@ -15,6 +15,10 @@ sudo ./aws/install
 
 RUN aws --version
 
+#Install jupyter resource usage 
+
+RUN conda install -c conda-forge jupyter-resource-usage
+
 # Clone repo to create env
 
 RUN git clone https://github.com/TiendaNube/data-dev-jupyter-docker.git /home/jupyter-datascience-dev/ 
