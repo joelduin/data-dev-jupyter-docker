@@ -5,4 +5,4 @@ dependencies:
   - matplotlib
   - pip
   - pip:
-    - -r file:./requirements/requirements_dirso367.txt
+    - -r file:/home/jupyter-datascience-dev/environments/requirements/requirements_dirso367.txt
