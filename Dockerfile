@@ -27,14 +27,20 @@ RUN cd /home/jupyter-datascience-dev
 # RUN chmod -R 777 /home/jupyter-datascience-dev
 #RUN ./test.sh
 
-# guido_env
+# # guido_env
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_guido.yml
-SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
-RUN python -m ipykernel install --name guido_env --display-name "guido_env"
+# RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_guido.yml
+# SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
+# RUN python -m ipykernel install --name guido_env --display-name "guido_env"
 
-# uru_env
+# # uru_env
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_uru.yml
-SHELL ["conda","run","-n","uru_env","/bin/bash","-c"]
-RUN python -m ipykernel install --name uru_env --display-name "uru_env"
+# RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_uru.yml
+# SHELL ["conda","run","-n","uru_env","/bin/bash","-c"]
+# RUN python -m ipykernel install --name uru_env --display-name "uru_env"
+
+# dirso367
+
+RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment/environment_dirso367.yml
+SHELL ["conda","run","-n","dirso367","/bin/bash","-c"]
+RUN python -m ipykernel install --name dirso367 --display-name "dirso367"

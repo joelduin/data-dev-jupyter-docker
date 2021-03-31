@@ -1,0 +1,8 @@
+name: dirso367
+dependencies:
+  - python=3.6.7
+  - ipykernel
+  - matplotlib
+  - pip
+  - pip:
+    - -r file:./requirements/requirements_dirso367.txt
