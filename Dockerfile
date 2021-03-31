@@ -41,6 +41,6 @@ RUN cd /home/jupyter-datascience-dev
 
 # dirso367
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment/environment_dirso367.yml
+RUN conda env create -q -f /home/jupyter-datascience-dev/environment/envs/environment_dirso367.yml
 SHELL ["conda","run","-n","dirso367","/bin/bash","-c"]
 RUN python -m ipykernel install --name dirso367 --display-name "dirso367"
