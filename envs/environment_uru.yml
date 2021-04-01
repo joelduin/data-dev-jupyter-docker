@@ -1,8 +1,0 @@
-name: uru_env
-dependencies:
-  - python=3.6
-  - ipykernel
-  - matplotlib
-  - pip
-  - pip:
-    - -r file:requirements_uru.txt
