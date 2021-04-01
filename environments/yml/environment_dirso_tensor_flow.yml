@@ -1,0 +1,8 @@
+name: dirso_tensor_flow
+dependencies:
+  - python=3.6.7
+  - ipykernel
+  - matplotlib
+  - pip
+  - pip:
+    - -r file:/home/jupyter-datascience-dev/environments/requirements/requirements_dirso_tensor_flow.txt
