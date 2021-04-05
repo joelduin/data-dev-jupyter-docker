@@ -31,23 +31,23 @@ RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/enviro
 SHELL ["conda","run","-n","dirso367","/bin/bash","-c"]
 RUN python -m ipykernel install --name dirso367 --display-name "dirso367"
 
-# 2 JoelEnv
+2 JoelEnv
 
-# RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_JoelEnv.yml
-# SHELL ["conda","run","-n","JoelEnv","/bin/bash","-c"]
-# RUN python -m ipykernel install --name JoelEnv --display-name "JoelEnv"
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_JoelEnv.yml
+SHELL ["conda","run","-n","JoelEnv","/bin/bash","-c"]
+RUN python -m ipykernel install --name JoelEnv --display-name "JoelEnv"
 
-# # 3 dcparrarincon
+# 3 dcparrarincon
 
-# RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_dcparrarincon.yml
-# SHELL ["conda","run","-n","dcparrarincon","/bin/bash","-c"]
-# RUN python -m ipykernel install --name dcparrarincon --display-name "dcparrarincon"
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_dcparrarincon.yml
+SHELL ["conda","run","-n","dcparrarincon","/bin/bash","-c"]
+RUN python -m ipykernel install --name dcparrarincon --display-name "dcparrarincon"
 
-# # 4 marienv
+# 4 marienv
 
-# RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_marienv.yml
-# SHELL ["conda","run","-n","marienv","/bin/bash","-c"]
-# RUN python -m ipykernel install --name marienv --display-name "marienv"
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_marienv.yml
+SHELL ["conda","run","-n","marienv","/bin/bash","-c"]
+RUN python -m ipykernel install --name marienv --display-name "marienv"
 
 # # 5 dirso_env
 
