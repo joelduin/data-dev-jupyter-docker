@@ -120,5 +120,3 @@ RUN python -m ipykernel install --name jaime --display-name "jaime"
 # RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_uru.yml
 # SHELL ["conda","run","-n","uru_env","/bin/bash","-c"]
 # RUN python -m ipykernel install --name uru_env --display-name "uru_env"
-
-RUN sudo chown -R jovyan:jovyan ~/.local/share/jupyter 
