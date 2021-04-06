@@ -31,7 +31,7 @@ RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/enviro
 SHELL ["conda","run","-n","dirso367","/bin/bash","-c"]
 RUN python -m ipykernel install --name dirso367 --display-name "dirso367"
 
-2 JoelEnv
+#2 JoelEnv
 
 RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_JoelEnv.yml
 SHELL ["conda","run","-n","JoelEnv","/bin/bash","-c"]
