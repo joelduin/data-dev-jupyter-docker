@@ -5,4 +5,4 @@ dependencies:
   - matplotlib
   - pip
   - pip:
-    - -r file:requirements_guido.txt
+    - -r file:/home/jupyter-datascience-dev/environments/requirements/requirements_guido.txt

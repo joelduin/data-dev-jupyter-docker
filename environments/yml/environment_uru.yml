@@ -5,4 +5,4 @@ dependencies:
   - matplotlib
   - pip
   - pip:
-    - -r file:requirements_uru.txt
+    - -r file:/home/jupyter-datascience-dev/environments/requirements/requirements_uru.txt

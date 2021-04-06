@@ -111,12 +111,12 @@ RUN python -m ipykernel install --name jaime --display-name "jaime"
 
 # 15 guido_env
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_guido.yml
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_guido.yml
 SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
 RUN python -m ipykernel install --name guido_env --display-name "guido_env"
 
 # 16 uru_env
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/envs/environment_uru.yml
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_uru.yml
 SHELL ["conda","run","-n","uru_env","/bin/bash","-c"]
 RUN python -m ipykernel install --name uru_env --display-name "uru_env"
