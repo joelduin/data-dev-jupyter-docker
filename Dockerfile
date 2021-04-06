@@ -75,9 +75,9 @@ RUN python -m ipykernel install --name rodrienv --display-name "rodrienv"
 
 # 9 dirso_tensor_flow
 
-RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_dirso_tensor_flow.yml
-SHELL ["conda","run","-n","dirso_tensor_flow","/bin/bash","-c"]
-RUN python -m ipykernel install --name dirso_tensor_flow --display-name "dirso_tensor_flow"
+# RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_dirso_tensor_flow.yml
+# SHELL ["conda","run","-n","dirso_tensor_flow","/bin/bash","-c"]
+# RUN python -m ipykernel install --name dirso_tensor_flow --display-name "dirso_tensor_flow"
 
 # 10 lucas_env
 
