@@ -14,4 +14,4 @@ services:
       - GRANT_SUDO=yes
       - JUPYTER_ENABLE_LAB=yes
 
-    command: "start.sh jupyter notebook --NotebookApp.token='Nube2021' --notebook-dir=/home/jovyan/work --ResourceUseDisplay.mem_limit=128000 --allow-root"
+    # command: "start.sh jupyter notebook --NotebookApp.token='Nube2021' --notebook-dir=/home/jovyan/work --ResourceUseDisplay.mem_limit=128000 --allow-root"
