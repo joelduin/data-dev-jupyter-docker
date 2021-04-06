@@ -62,10 +62,6 @@ mistune==0.8.4
 monotonic==1.5
 msgpack==1.0.0
 multidict==5.1.0
-mysql==0.0.2
-mysql-connector==2.2.9
-mysql-connector-python==8.0.22
-mysqlclient==2.0.1
 nbclient==0.5.1
 nbconvert==6.0.7
 nbformat==5.0.8
