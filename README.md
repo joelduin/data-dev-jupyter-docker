@@ -28,9 +28,9 @@ Instalado sobre EC2 (data-gp3)
 
 #### Librerías
 
-> <sub> *Existen dos formas de instalar librerías, de forma **temporal** y de forma **permanente**.
+> <sub>*Existen dos formas de instalar librerías, de forma **temporal** y de forma **permanente**.
 > Cuando se necesita necesita instalar una librería de forma inmediata y probar su funcionamiento vamos a instalarla de forma **temporal**.
-> Una vez que se sabemos que esa libreria funciona y se requiere utilizar de forma regular, la instalamos de forma **permanente*** </sub>
+> Una vez que se sabemos que esa libreria funciona y se requiere utilizar de forma regular, la instalamos de forma **permanente***</sub>
 
 ##### Instalar librería de forma temporal
 
@@ -53,7 +53,7 @@ Instalado sobre EC2 (data-gp3)
 #### Environments
 
 > <sub>*Existen dos formas de instalar environments, de forma **temporal** y de forma **permanente**.
-> Cuando se necesita necesita instalar un environments de forma inmediata y probar su funcionamiento vamos a instalarla de forma **temporal**. *(Ejemplo: Queremos probar una nueva version de Python)*
+> Cuando se necesita necesita instalar un environment de forma inmediata y probar su funcionamiento vamos a instalarlo de forma **temporal**. *(Ejemplo: Queremos probar una nueva version de Python)*
 > Una vez que se sabemos que ese environment funciona y se requiere utilizar de forma regular, lo instalamos de forma **permanente***</sub> 
 
 
