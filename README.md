@@ -56,11 +56,13 @@ Instalado sobre EC2 (data-gp3)
 
 > Los environments permanentes son creados desde un archivo [YML](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually)
 
+*Se toma como ejemplo la creacion de guido_env*
+
 1) Ingresar a la carpeta de requerimientos dentro del repo `/environments/requirements` y crear un nuevo file con las librerias que necesitamos.
 2) Ingresar a la carpeta de requerimientos dentro del repo `/environments/yml`
 3) Crear archivo yml con la siguiente estructura:
 
-*Ejemplo: guido_env*
+
 ```
 name: guido_env
 dependencies:
@@ -72,12 +74,14 @@ dependencies:
     - -r file:/home/jupyter-datascience-dev/environments/requirements/requirements_guido.txt
 ```
 
-**name:** Nombre del environment
-**dependencies:** indicar la versión de Python a utilizar
+**name:** Nombre del environment.
+
+**dependencies:** indicar la versión de Python a utilizar.
+
 **pip:** Mediante `-r file:` indicamos el path dentro del contendor de docker donde se encuentra el file de requerimientos correspondiente a nuestro env.
 
 3) Abrir el archivo `Dockerfile` dentro del directorio raiz de nuestro repo.
-4) Agregar al final del archivo lo siguientes comandos.
+4) Agregar al final del archivo lo siguientes 4 líneas de código.
 
 ```
 # 15 guido_env
@@ -87,3 +91,12 @@ SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
 RUN python -m ipykernel install --name guido_env --display-name "guido_env"
 
 ```
+
+**Línea 1:** Es un comentario indicar a que envrionment se hace referencia
+**Línea 2:** RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/`[Archivo YML creado en paso 3]`
+**Línea 3:** SHELL ["conda","run","-n","`[Environment name de YML file]`","/bin/bash","-c"]
+**Línea 4:** RUN python -m ipykernel install --name `[Environment name de YML file]` --display-name "`[Environment name de YML file]`"
+
+5) Guardar, commitear y pushear
+
+> **IMPORTANTE:** El cambio se vera reflejado en el próximo build del contenedor de Docker, el mismo se realiza de forma automatica, 1 vez por semana durante el fin de semana
