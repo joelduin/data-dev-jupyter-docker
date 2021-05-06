@@ -1,12 +1,12 @@
 # Jupyter Docker for Tiendanube/Nuvemshop Data Team :rocket:
 
-Repositorio que contiene la infraestrucutra necesaria para utilizar Servidorcito 3.0
+Repositorio que contiene la infraestructura necesaria para utilizar Servidorcito 3.0
 
 Construido sobre Docker a partir de la imagen oficial de [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
 Instalado sobre EC2 (data-gp3)
 
-####Ingresar a Jupyter
+#### Ingresar a Jupyter
 
 ```ssh -N -L "localhost:8884:10.1.103.91:8888" ubuntu@vpn-us.linkedstore.com & ```
 
@@ -16,7 +16,7 @@ Instalado sobre EC2 (data-gp3)
 2) `docker ps -a` (Ver el nombre de contenedor)
 3) `docker exec -it data-dev-jupyter-docker_jupyter-data_1 /bin/bash`
 
-## Comandos Utiles
+## Comandos Útiles
 
 #### Listar environments instalados:
 
@@ -28,21 +28,21 @@ Instalado sobre EC2 (data-gp3)
 
 #### Librerías
 
-##### Intalar librería de forma temporal
+##### Instalar librería de forma temporal
 
 1) [Activar environment](#activar-environment)
-2) Instalar libreria via conda/pip
+2) Instalar librería vía conda/pip
 
 > **Importante:** Si no se instala la librería de forma permanante, la misma dejará de existir cuando el contenedor de Docker se reinicie
 
 
-##### Intalar librería de forma permanente
+##### Instalar librería de forma permanente
 
 1) Ingresar a la carpeta de requerimientos dentro del repo `/environments/requirements`
 2) Buscar archivo de requerimiento correspondiente al envronment
-3) Editar el archivo y agregar al final la librería y version que deseamos instalar
+3) Editar el archivo y agregar al final la librería y versión que deseamos instalar
 
-> **Importante:** Si no se indica la version de la librería a instalr, por defecto instalará siempre la ultima versión disponible
+> **Importante:** Si no se indica la version de la librería a instalar, por defecto instalará siempre la última versión disponible
 
 4) Guardar, commitear y pushear
 
@@ -50,15 +50,15 @@ Instalado sobre EC2 (data-gp3)
 
 ##### Crear environment de forma temporal
 
-   - Los environments dentro del contenedor son creados via *[conda](https://conda.io/projects/conda/en/latest/index.html)*, existen multiples formas de crear un nuevo environment. *[[Conda managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)]*
+   - Los environments dentro del contenedor son creados via *[conda](https://conda.io/projects/conda/en/latest/index.html)*, existen múltiples formas de crear un nuevo environment. *[[Conda managing environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)]*
 
 ##### Crear environment de forma permanente
 
 > Los environments permanentes son creados desde un archivo [YML](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually)
 
-*Se toma como ejemplo la creacion de guido_env*
+*Se toma como ejemplo la creación de guido_env*
 
-1) Ingresar a la carpeta de requerimientos dentro del repo `/environments/requirements` y crear un nuevo file con las librerias que necesitamos.
+1) Ingresar a la carpeta de requerimientos dentro del repo `/environments/requirements` y crear un nuevo file con las librerías que necesitamos.
 2) Ingresar a la carpeta de requerimientos dentro del repo `/environments/yml`
 3) Crear archivo yml con la siguiente estructura:
 
@@ -80,8 +80,8 @@ dependencies:
 
 **pip:** Mediante `-r file:` indicamos el path dentro del contendor de docker donde se encuentra el file de requerimientos correspondiente a nuestro env.
 
-3) Abrir el archivo `Dockerfile` dentro del directorio raiz de nuestro repo.
-4) Agregar al final del archivo lo siguientes 4 líneas de código.
+3) Abrir el archivo `Dockerfile` dentro del directorio raíz de nuestro repo.
+4) Agregar al final del archivo las siguientes 4 líneas de código.
 
 ```
 # 15 guido_env
