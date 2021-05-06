@@ -8,7 +8,7 @@ Instalado sobre EC2 (data-gp3)
 
 #### Ingresar a Jupyter
 
-```ssh -N -L "localhost:8884:10.1.103.91:8888" ubuntu@vpn-us.linkedstore.com & ```
+```ssh -N -L "localhost:8884:10.1.103.91:8885" ubuntu@vpn-us.linkedstore.com & ```
 
 ## Conectarse al servidor Jupyter via command line
 
@@ -27,6 +27,10 @@ Instalado sobre EC2 (data-gp3)
 - ```source activate MY_ENV```
 
 #### Librerías
+
+> Existen dos formas de instalar librerías, de forma **temporal** y de forma **permanente**.
+> Cuando se necesita necesita instalar una librería de forma inmediata y probar su funcionamiento vamos a instalarla de forma **temporal**.
+> Una vez que se sabemos que esa libreria funciona y se requiere utilizar de forma regular, la instalamos de forma **permanente**
 
 ##### Instalar librería de forma temporal
 
@@ -47,6 +51,11 @@ Instalado sobre EC2 (data-gp3)
 4) Guardar, commitear y pushear
 
 #### Environments
+
+> Existen dos formas de instalar environments, de forma **temporal** y de forma **permanente**.
+> Cuando se necesita necesita instalar un environments de forma inmediata y probar su funcionamiento vamos a instalarla de forma **temporal**. *(Ejemplo: Queremos probar una nueva version de Python)*
+> Una vez que se sabemos que ese environment funciona y se requiere utilizar de forma regular, lo instalamos de forma **permanente**
+
 
 ##### Crear environment de forma temporal
 
@@ -91,11 +100,6 @@ SHELL ["conda","run","-n","guido_env","/bin/bash","-c"]
 RUN python -m ipykernel install --name guido_env --display-name "guido_env"
 
 ```
-
-**Línea 1:** Es un comentario indicar a que envrionment se hace referencia
-**Línea 2:** RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/`[Archivo YML creado en paso 3]`
-**Línea 3:** SHELL ["conda","run","-n","`[Environment name de YML file]`","/bin/bash","-c"]
-**Línea 4:** RUN python -m ipykernel install --name `[Environment name de YML file]` --display-name "`[Environment name de YML file]`"
 
 5) Guardar, commitear y pushear
 
