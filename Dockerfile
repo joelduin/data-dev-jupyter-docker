@@ -131,3 +131,9 @@ RUN python -m ipykernel install --name uru_env --display-name "uru_env"
 RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_francoenv.yml
 SHELL ["conda","run","-n","francoenv","/bin/bash","-c"]
 RUN python -m ipykernel install --name francoenv --display-name "francoenv"
+
+# 18 tomenv
+ 
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_tomenv.yml
+SHELL ["conda","run","-n","tomenv","/bin/bash","-c"]
+RUN python -m ipykernel install --name tomenv --display-name "tomenv"
