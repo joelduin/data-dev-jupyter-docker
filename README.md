@@ -4,7 +4,7 @@ Repositorio que contiene la infraestructura necesaria para utilizar Servidorcito
 
 Construido sobre Docker a partir de la imagen oficial de [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
-Instalado sobre EC2 (data-gp3)
+Instalado sobre EC2 (data-gp4)
 
 #### Ingresar a Jupyter
 
