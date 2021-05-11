@@ -125,3 +125,9 @@ RUN python -m ipykernel install --name guido_env --display-name "guido_env"
 RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_uru.yml
 SHELL ["conda","run","-n","uru_env","/bin/bash","-c"]
 RUN python -m ipykernel install --name uru_env --display-name "uru_env"
+
+# 17 francoenv
+ 
+RUN conda env create -q -f /home/jupyter-datascience-dev/environments/yml/environment_francoenv.yml
+SHELL ["conda","run","-n","francoenv","/bin/bash","-c"]
+RUN python -m ipykernel install --name francoenv --display-name "francoenv"
